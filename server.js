@@ -14,6 +14,6 @@ console.log(uri)
 mongoose.connect(uri);
 const connection = mongoose.connection;
 connection.once('open', () => {
-console.log("MongoDB database connection established successfully");
+console.log("MongoDB database connection established successfully running on Port 5000");
 })
 app.listen(port,()=>{'server is listening on port',port});
