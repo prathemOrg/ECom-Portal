@@ -1,3 +1,4 @@
+import saveUser from './controller/userController';
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
@@ -8,6 +9,7 @@ const port = process.env.PORT|| 5000
 app.use(cors())
 
 app.use(express.json());
+app.use('/register', saveUser);
 
 const uri = process.env.DB_URI;
 console.log(uri)
